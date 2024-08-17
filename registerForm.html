@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Mart Billing Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            font-family: 'Mulish', sans-serif;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            position: relative;
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: royalblue; /* Violet color for the title */
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .logo {
+            display: block;
+            max-width: 280px;
+            margin: 0 auto 20px;
+        }
+        fieldset {
+            border: 2px solid #ff6600;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 0 10px;
+            width: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-control {
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-control:focus {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .btn-submit {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            width: 100%; /* Full width for the submit button */
+        }
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container form-container">
+    <img src="fbmart1.png" alt="FB Mart Logo" class="logo">
+    <div class="form-title">FB Mart Billing Form</div>
+    <form id="ecommerceForm" enctype="multipart/form-data" action="register.php" method="POST">
+
+        <fieldset>
+            <legend>Franchise Owner Info</legend>
+            <div class="form-group">
+                <label for="franchiseOwnerName">Franchise Owner Name</label>
+                <input type="text" class="form-control" id="franchiseOwnerName" name="franchiseOwnerName" required>
+            </div>
+            <div class="form-group">
+                <label for="mobileNumber">Franchise Mobile Number</label>
+                <input type="tel" class="form-control" id="mobileNumber" name="mobileNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="whatsappNumber">Franchise WhatsApp Number</label>
+                <input type="tel" class="form-control" id="whatsappNumber" name="whatsappNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Franchise Address</label>
+                <input type="text" class="form-control" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="emailId">Franchise Email ID</label>
+                <input type="email" class="form-control" id="emailId" name="emailId" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Product Details</legend>
+            <div class="form-group">
+                <label for="productQuantity">Product Quantity</label>
+                <input type="number" class="form-control" id="productQuantity" name="productQuantity" required>
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Product Price</label>
+                <input type="number" class="form-control" id="productPrice" name="productPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="productGrossPrice">Product Gross Price</label>
+                <input type="number" class="form-control" id="productGrossPrice" name="productGrossPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="productMRP">Product MRP Price</label>
+                <input type="number" class="form-control" id="productMRP" name="productMRP" required>
+            </div>
+            <div class="form-group">
+                <label for="discountPercentage">Discount in Percentage</label>
+                <input type="number" class="form-control" id="discountPercentage" name="discountPercentage" required>
+            </div>
+            <div class="form-group">
+                <label for="finalPriceWithDiscount">Final Price with Discount</label>
+                <input type="number" class="form-control" id="finalPriceWithDiscount" name="finalPriceWithDiscount" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Members Details</legend>
+            <div class="form-group">
+                <label for="memberName">Member Name</label>
+                <input type="text" class="form-control" id="memberName" name="memberName" required>
+            </div>
+            <div class="form-group">
+                <label for="memberId">Member ID</label>
+                <input type="text" class="form-control" id="memberId" name="memberId" required>
+            </div>
+            <div class="form-group">
+                <label for="memberMobile">Member Mobile</label>
+                <input type="tel" class="form-control" id="memberMobile" name="memberMobile" required>
+            </div>
+            <div class="form-group">
+                <label for="memberWhatsapp">Member WhatsApp</label>
+                <input type="tel" class="form-control" id="memberWhatsapp" name="memberWhatsapp" required>
+            </div>
+            <div class="form-group">
+                <label for="memberEmail">Member Email</label>
+                <input type="email" class="form-control" id="memberEmail" name="memberEmail" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Purchase Product Details</legend>
+            <div class="form-group">
+                <label for="purchaseProductName">Purchase Product Name</label>
+                <input type="text" class="form-control" id="purchaseProductName" name="purchaseProductName" required>
+            </div>
+            <div class="form-group">
+                <label for="purchaseProductSize">Product Size</label>
+                <select class="form-control" id="purchaseProductSize" name="purchaseProductSize" required>
+                    <option value="S">Small (S)</option>
+                    <option value="M">Medium (M)</option>
+                    <option value="L">Large (L)</option>
+                    <option value="XL">Extra Large (XL)</option>
+                    <option value="XXL">Extra Extra Large (XXL)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="purchaseProductQuantity">Product Quantity</label>
+                <input type="number" class="form-control" id="purchaseProductQuantity" name="purchaseProductQuantity" required>
+            </div>
+            <div class="form-group">
+                <label for="purchaseFinalPriceWithDiscount">Final Price with Discount</label>
+                <input type="number" class="form-control" id="purchaseFinalPriceWithDiscount" name="purchaseFinalPriceWithDiscount" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Payment Mode</legend>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMode" id="cash" value="Cash" required>
+                    <label class="form-check-label" for="cash">Cash</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMode" id="online" value="Online" required>
+                    <label class="form-check-label" for="online">Online</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMode" id="cod" value="COD" required>
+                    <label class="form-check-label" for="cod">COD</label>
+                </div>
+            </div>
+        </fieldset>
+        
+          <fieldset>
+            <legend>Payment Proof</legend>
+            <div class="form-group">
+                <label for="paymentProof">Upload Payment Proof</label>
+                <input type="file" class="form-control-file" id="paymentProof" name="paymentProof[]" multiple>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Exchange Product</legend>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exchangeProduct" id="exchangeYes" value="Yes" required>
+                    <label class="form-check-label" for="exchangeYes">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exchangeProduct" id="exchangeNo" value="No" required>
+                    <label class="form-check-label" for="exchangeNo">No</label>
+                </div>
+            </div>
+            <div class="form-group" id="exchangeReasonGroup" style="display: none;">
+                <label for="exchangeReason">Exchange Reason</label>
+                <textarea class="form-control" id="exchangeReason" name="exchangeReason"></textarea>
+            </div>
+        </fieldset>
+
+      
+
+        <button type="submit" class="btn btn-submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Show/Hide exchange reason field based on selection
+        const exchangeRadios = document.querySelectorAll('input[name="exchangeProduct"]');
+        const exchangeReasonGroup = document.getElementById('exchangeReasonGroup');
+
+        exchangeRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'Yes') {
+                    exchangeReasonGroup.style.display = 'block';
+                } else {
+                    exchangeReasonGroup.style.display = 'none';
+                }
+            });
+        });
+
+        // Smooth form animations
+        const formElements = document.querySelectorAll('.form-container fieldset');
+        formElements.forEach((element, index) => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, index * 150);
+        });
+    });
+</script>
+
+</body>
+</html>
